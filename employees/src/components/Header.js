@@ -14,9 +14,12 @@ const styles = {
 
 function Header() {
   return (
+    <>
     <header style={styles.headerStyle} className="header">
       <h1 style={styles.h1}>Employee Directory</h1>
     </header>
+    <br></br>
+    </>
   );
 }
 
