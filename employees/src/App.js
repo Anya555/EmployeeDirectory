@@ -1,16 +1,11 @@
 import React from "react";
-import Header from "./components/Header";
-import SearchForm from "./components/SearchForm"
+import Employeecontainer from "./components/EmployeeContainer";
+
 
 
 
 function App () {
-   return(
-       <>
-      <Header/>
-      <SearchForm/>
-      </>
-   )
+   return <Employeecontainer/>
 }
 
 export default App;
