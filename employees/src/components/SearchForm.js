@@ -1,18 +1,13 @@
 import React from "react";
+import "../styles/style.css"
 
-const styles ={
-input:{
- height: "30px",
- width: "200px",
-//  display: "flex",
-//           justifyContent: "center",
-//           alignItems: "center"
-}
-}
+
 function SearchForm(props) {
+
+
   return (
     <form>
-      <div className="form-group" style={styles.input}>
+      <div className="form-group">
         <input 
           onChange={props.handleInputChange}
           value={props.value}
@@ -22,7 +17,7 @@ function SearchForm(props) {
           placeholder="Search for employee"
           id="search"
         />
-        <br />
+        <br /><br/>
       </div>
     </form>
   );
