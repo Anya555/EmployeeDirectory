@@ -5,7 +5,6 @@ import Col from "./Col";
 import Header from "./Header";
 import SearchForm from "./SearchForm";
 import Table from "./Table";
-// import EmployeeDetail from "./EmployeeDetail";
 import API from "../utils/API";
 
 class EmployeeContainer extends Component {
@@ -56,28 +55,16 @@ class EmployeeContainer extends Component {
           </Col>
         </Row>
         <Row>
-          <Col size="md-12 offset-4">
+          <div className="col-6 offset-lg-4">
             <SearchForm 
             value={this.state.search}
             handleInputChange={this.handleInputChange}
             />
-          </Col>
+          </div>
         </Row>
         <Row>
           <Col size="md-12">
             <Table data={this.state.results} />
-
-
-            {/* <EmployeeDetail
-            data={this.state.results}
-            // picture = {this.state.results.picture}
-            // name = {this.state.results.name}
-            // phone = {this.state.results.phone}
-            // email = {this.state.results.email}
-            // dob = {this.state.results.dob}
-             /> */}
-              
-            
           </Col>
         </Row>
       </Container>
