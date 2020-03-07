@@ -1,5 +1,7 @@
 import React from 'react';
 import "../styles/style.css"
+
+
 const headers = [
     { id: 1, label: "Image" },
     { id: 2, label: "Name" },
@@ -7,7 +9,12 @@ const headers = [
     { id: 4, label: "Email" },
     { id: 5, label: "DOB" },
 ];
+
+
+
 function Table(props) {
+
+   
     return (
       <div>
         <table id="table">
@@ -35,4 +42,5 @@ function Table(props) {
       </div>
     )
 }
+
 export default Table

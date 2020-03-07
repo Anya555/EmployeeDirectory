@@ -39,14 +39,17 @@ class EmployeeContainer extends Component {
     });
   };
 
-
-//  sortEmployee = () => {
-// let employees = this.state.results.filter(user => {
-//   return user.name ???
-// })
-//  }
+ 
 
   render() {
+   
+    // let searchResult = this.state.results.filter(employee => {
+    //   return (
+    //     (employee.name.first + " " + employee.name.last).toLowerCase()
+    //       .includes(this.state.search.toLowerCase())
+    //   );
+    // });
+
     return (
       <Container>
         <Row>
