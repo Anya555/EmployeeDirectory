@@ -1,31 +1,36 @@
-.header{
-    margin-top: -23px;
-    background-color: rgb(7, 7, 43);
-    border-bottom: 3px solid red;
+.navbar-brand {
+  text-transform: uppercase;
+  color: white !important;
+  font-weight: bold;
 }
 
- #table th {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
+nav {
+  background-color: rgb(7, 7, 59) !important;
+  border-bottom: 5px solid red;
+}
 
-  #table td{
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: center;
-    width:230px;
-  }
+#table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
 
-  #table th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: center;
-    background-color: #4CAF50;
-    color: white;
-    width:230px;
-  }
+#table td {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  width: 230px;
+}
 
- #search{
-   height:30px;
-   width:200px;
- }
+#table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #4caf50;
+  color: white;
+  width: 250px;
+}
+
+#search {
+  height: 30px;
+  width: 200px;
+}
