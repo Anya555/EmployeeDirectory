@@ -22,7 +22,7 @@ function Table(props) {
         </thead>
         <tbody>
           {props.data.map((item) => (
-            <tr key={item.email}>
+            <tr key={item.id.value}>
               <td>
                 <img src={item.picture.medium} alt="avatar" />
               </td>

@@ -10,6 +10,7 @@ class EmployeeContainer extends Component {
     super(props);
     this.state = {
       results: [],
+      filteredResults: [],
       search: "",
     };
   }
@@ -17,24 +18,46 @@ class EmployeeContainer extends Component {
   componentDidMount() {
     this.getAllUsers();
   }
+
   getAllUsers = () => {
     API.search()
       .then((res) => {
         console.log(res);
-        this.setState({ results: res.data.results });
+        this.setState({
+          results: res.data.results,
+          filteredResults: res.data.results,
+        });
       })
       .catch((err) => {
         console.log(err);
-        this.setState({ search: "" });
       });
+  };
+
+  getFilteredData = () => {
+    let filteredResults = this.state.results;
+    console.log(this.state.search);
+    filteredResults = filteredResults.filter((employee) => {
+      let newEmployee = (
+        employee.name.first +
+        " " +
+        employee.name.last
+      ).toLowerCase();
+      return newEmployee.includes(this.state.search.toLowerCase());
+    });
+    this.setState({ filteredResults });
   };
 
   handleInputChange = (e) => {
     const { name, value } = e.target;
-    console.log(e.target);
-    this.setState({
-      [name]: value,
-    });
+    // console.log(e.target);
+    this.setState(
+      {
+        [name]: value,
+      },
+      () => {
+        this.getFilteredData();
+      }
+    );
   };
 
   render() {
@@ -48,9 +71,9 @@ class EmployeeContainer extends Component {
             <div className="col-md-4 offset-sm-4 col-sm-12">
               <br></br>
               <Form>
-                <Form.Group controlId="formGridEmail">
+                <Form.Group>
                   <Form.Control
-                    type="search"
+                    name="search"
                     placeholder="Search employee..."
                     value={this.state.search}
                     onChange={this.handleInputChange}
@@ -58,10 +81,10 @@ class EmployeeContainer extends Component {
                 </Form.Group>
               </Form>
             </div>
-
             <br></br>
+
             <div className="col-md-12">
-              <Table data={this.state.results} />
+              <Table data={this.state.filteredResults}></Table>
             </div>
           </div>
         </div>
