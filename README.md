@@ -9,4 +9,4 @@ Technologies used for this project:
 - Bootstrap
 - Randomuser API
 
-[!EmployeeDirectory](./employees/public/employeeDirectory.gif)
+![EmployeeDirectory](./employees/public/employeeDirectory.gif)
